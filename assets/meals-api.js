@@ -1,4 +1,4 @@
-function getMealApi() {
+function getMealId() {
     console.log("got dat API");
 
     var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast`
@@ -10,23 +10,29 @@ function getMealApi() {
     })
     .then(function (data) {
       console.log(data);
-      var meals = data.meals
+      var meals = data.meals;
       for (i = 0; i < meals.length; i++) {
         var mealId = meals[i].idMeal;
         console.log("This is a meal ID => " + mealId);
+        var recipeTitle = meals[i].strMeal
+        console.log("This is the recipe title: " + recipeTitle)
         }    
     })
 }
 
-getMealApi();
+getMealId();
 
-        // var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
+function getMealRecipe() {
+  var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=53016`
         
-        // fetch(requestUrl)
-        // .then(function (response) {
-        //     console.log(response);
-        //      return response.json();
-        // })
-        // .then(function (data) {
-        //     console.log(data);
-        // })
+        fetch(requestUrl)
+        .then(function (response) {
+            console.log(response);
+             return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+}        
+
+getMealRecipe();
