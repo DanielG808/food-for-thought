@@ -5,7 +5,9 @@ header {
 #pagesubname {
   align-items: center;
 }
-aside,
 main {
   background-color: pink;
+}
+footer {
+  background-color: cornsilk;
 }
