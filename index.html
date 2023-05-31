@@ -24,20 +24,22 @@
         <button class="btn btn-primary" type="submit" id="Search-button">
           Search
         </button>
+        
         <h2 id="maps">maps</h2>
+        <div id="map"></div>
       </aside>
       <ul>
         <li>list of recipes</li>
       </ul>
     </main>
     <footer><p>Made by raptors</p></footer>
-    <script
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <script
-      async
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
+      defer
     ></script>
     <script src="assets/meals-api.js"></script>
     <script src="assets/googleapi.js"></script>
