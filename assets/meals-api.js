@@ -1,3 +1,11 @@
+// DEPENEDENCIES
+
+var recipeCardEl = document.getElementsByClassName("card-section")
+
+// DATA
+
+//FUNCTIONS
+
 function getMealId() {
     console.log("got dat API");
 
@@ -14,8 +22,8 @@ function getMealId() {
       for (i = 0; i < meals.length; i++) {
         var mealId = meals[i].idMeal;
         console.log("This is a meal ID => " + mealId);
-        var recipeTitle = meals[i].strMeal
-        console.log("This is the recipe title: " + recipeTitle)
+        var recipeTitle = meals[i].strMeal;
+        console.log("This is the recipe title: " + recipeTitle);
         }    
     })
 }
@@ -36,3 +44,7 @@ function getMealRecipe() {
 }        
 
 getMealRecipe();
+
+// USER INTERACTIONS
+
+// INITILIZATIONS
