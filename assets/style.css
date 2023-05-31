@@ -1,0 +1,11 @@
+header {
+  background-color: cornsilk;
+  display: flex;
+}
+#pagesubname {
+  align-items: center;
+}
+aside,
+main {
+  background-color: pink;
+}
