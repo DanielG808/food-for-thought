@@ -61,13 +61,13 @@ footer {
 
 /* table styling */
 
-.table-override {
+.card-override {
   display: block;
   position: relative;
   left: 28.5rem;
   top: -3.3rem;
   border: solid black 1px;
-  width: 64%;
+  width: 15%;
 }
 
 /* Search Style */
