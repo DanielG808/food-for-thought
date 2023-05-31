@@ -7,7 +7,8 @@ header {
   display: flex;
 }
 #pagesubname {
-  align-items: center;
+  position: relative;
+  margin-left: 25%;
 }
 main {
   background-color: pink;
