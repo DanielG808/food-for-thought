@@ -72,7 +72,8 @@ footer {
 
 /* Search Style */
 
-#map{
-  height: 20px;
+#map {
+  height: 820px;
+  width: 100%;
 }
 
