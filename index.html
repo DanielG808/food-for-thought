@@ -34,6 +34,7 @@
           <li><button type="button" class="button">Search</button></li>
         </ul>
         <h2 id="maps">Map</h2>
+        <div id="map"></div>
       </aside>
       <!-- recipe list -->
       <table class="table-override">
@@ -67,12 +68,14 @@
         </tbody>
       </table>
     </main>
-    <script src="
-    https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js
-    "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
-      async
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
+      defer
     ></script>
     <script src="assets/meals-api.js"></script>
     <script src="assets/googleapi.js"></script>
