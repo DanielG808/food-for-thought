@@ -79,6 +79,7 @@ searchInputEl.addEventListener("keydown", function (e) {
     e.preventDefault();
     console.log("button clicked!");
     getMealCards();
+    searchInputEl.value = ""
   }
 })
 
