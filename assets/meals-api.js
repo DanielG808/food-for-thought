@@ -32,20 +32,33 @@ function getMealCards() {
         recipeCard.classList.add("card");
         // recipeCard.textContent = "card"
         document.querySelector(".card-container").appendChild(recipeCard);
+        
+        for (i = 0; i < meals.length; i++) {
+          var recipeTitle = meals[i].strMeal;
+          var recipeImg = meals[i].strMealThumb;
 
-        var recipeTitle = meals[i].strMeal;
-        var recipeImg = meals[i].strMealThumb;
+          var imgDiv = document.createElement("div");
+          var titleDiv = document.createElement("div");
 
-        var cardImgEl = document.createElement("img");
-        var cardTitleEl = document.createElement("p");
+          imgDiv.classList.add("card-section");
+          titleDiv.classList.add("card-section");
 
-        cardImgEl.src = recipeImg
-        cardTitleEl.textContent = recipeTitle
+          document.querySelector(".card").appendChild(imgDiv);
+          document.querySelector(".card").appendChild(titleDiv);
 
-        document.querySelector(".card").appendChild(cardImgEl);
-        document.querySelector(".card").appendChild(cardTitleEl);
-        // cardImg.classList.add("meal-img");
-        // cardImg.src = recipeImg;
+          var cardImgEl = document.createElement("img");
+          var cardTitleEl = document.createElement("p");
+          // var cardLinkEl = document.createElement("");
+
+          cardImgEl.classList.add("meal-img");
+          cardImgEl.src = recipeImg
+          cardTitleEl.textContent = recipeTitle
+
+          document.querySelector(".card-section").appendChild(cardImgEl);
+          document.querySelector(".card-section").appendChild(cardTitleEl);
+        }
+
+        
         
 
         }    

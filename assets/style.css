@@ -64,7 +64,6 @@ footer {
   flex-direction: column;
   width: 20%;
   position: relative;
-  
   align-items: center;
 }
 
@@ -77,6 +76,13 @@ footer {
   top: -3.3rem;
   border: solid black 1px;
   width: 15%;
+}
+
+/* card image styling */
+
+.meal-img {
+  width: 100px;
+  height: auto;
 }
 
 /* Search Style */
