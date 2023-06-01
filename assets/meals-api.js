@@ -1,12 +1,16 @@
 // DEPENEDENCIES
 
-var recipeCardEl = document.getElementsByClassName("card-section")
+var recipeCardEl = document.getElementsByClassName("card-section");
+
+var searchInputEl = document.querySelector(".search-input");
+var searchButtonEl = document.querySelector(".search-button");
+
 
 // DATA
 
 //FUNCTIONS
 
-function getMealId() {
+function getMeal() {
     console.log("got dat API");
 
     var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast`
@@ -34,8 +38,6 @@ function getMealId() {
     })
 }
 
-getMealId();
-
 function getMealRecipe() {
   var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=53016`
         
@@ -52,5 +54,11 @@ function getMealRecipe() {
 getMealRecipe();
 
 // USER INTERACTIONS
+
+searchButtonEl.addEventListener("click", function (event) {
+  event.preventDefault();
+  console.log("button clicked!");
+  getMeal();
+})
 
 // INITILIZATIONS
