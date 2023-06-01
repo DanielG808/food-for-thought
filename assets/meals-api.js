@@ -49,9 +49,9 @@ function getMealCards() {
         imgDiv.appendChild(cardImgEl);
         titleDiv.appendChild(cardTitleEl);
 
-          // var cardLinkEl = document.createElement("");
-
-
+        recipeCard.addEventListener("click" , function(event) {
+          console.log("ya clicked a recipe...CONGRATS!")
+        })
 
         }    
     })
