@@ -10,8 +10,7 @@ var searchButtonEl = document.querySelector(".search-button");
 
 //FUNCTIONS
 
-function getMeal() {
-    console.log("got dat API");
+function getMealCards() {
 
     var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast`
 
@@ -24,16 +23,21 @@ function getMeal() {
       console.log(data);
       var meals = data.meals;
       for (i = 0; i < meals.length; i++) {
+        console.log(meals);
+        // generates a card for the recipe info to live
         var recipeCard = document.createElement("div");
         var mealId = meals[i].idMeal;
-        // console.log("This is a meal ID => " + mealId);
-        var recipeTitle = meals[i].strMeal;
-        // console.log("This is the recipe title: " + recipeTitle);
-
+        // adds the class card for styling
         recipeCard.classList.add("card");
-        recipeCard.textContent = "card"
+        // recipeCard.textContent = "card"
 
         document.querySelector(".card-container").appendChild(recipeCard);
+
+        var recipeTitle = meals[i].strMeal;
+        console.log(recipeTitle);
+        var recipeImg = meals[i].strMealThumb;
+        console.log(recipeImg);
+
         }    
     })
 }
@@ -58,7 +62,7 @@ getMealRecipe();
 searchButtonEl.addEventListener("click", function (event) {
   event.preventDefault();
   console.log("button clicked!");
-  getMeal();
+  getMealCards();
 })
 
 // INITILIZATIONS
