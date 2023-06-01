@@ -29,18 +29,23 @@ function initMap() {
 }
 
 function createMarker(place) {
-    if (!place.geometry || !place.geometry.location) return;
-  
-    const marker = new google.maps.Marker({
-      map,
-      position: place.geometry.location,
-    });
-  
-    google.maps.event.addListener(marker, "click", () => {
-      infowindow.setContent(place.name || "");
-      infowindow.open(map);
-    });
-  }
-  
-  window.initMap = initMap;
-  
+  if (!place.geometry || !place.geometry.location) return;
+
+  const icon = {
+    url: "path/to/custom/icon.png", // Provide the path to your custom icon image
+    scaledSize: new google.maps.Size(50, 50), // Adjust the size of the icon as needed
+  };
+
+  const marker = new google.maps.Marker({
+    map,
+    position: place.geometry.location,
+    icon: icon, //Set the custom icon for the marker
+  });
+
+  google.maps.event.addListener(marker, "click", () => {
+    infowindow.setContent(place.name || "");
+    infowindow.open(map);
+  });
+}
+
+window.initMap = initMap;
