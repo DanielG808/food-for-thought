@@ -3,7 +3,7 @@
 var recipeCardEl = document.getElementsByClassName("card-section");
 
 var searchInputEl = document.querySelector(".search-input");
-var searchButtonEl = document.querySelector(".search__button");
+var searchButtonEl = document.querySelector("#search-button");
 
 
 // DATA
@@ -24,23 +24,28 @@ function getMealCards() {
       var meals = data.meals;
       for (i = 0; i < meals.length; i++) {
         console.log(meals);
+        var mealId = meals[i].idMeal;
+
         // generates a card for the recipe info to live
         var recipeCard = document.createElement("div");
-        var mealId = meals[i].idMeal;
         // adds the class card for styling
         recipeCard.classList.add("card");
         // recipeCard.textContent = "card"
-
         document.querySelector(".card-container").appendChild(recipeCard);
 
         var recipeTitle = meals[i].strMeal;
         var recipeImg = meals[i].strMealThumb;
 
-        var cardImg = document.createElement("img");
-        cardImg.classList.add("meal-img")
-        cardImg.src = recipeImg
+        var cardImgEl = document.createElement("img");
+        var cardTitleEl = document.createElement("p");
 
-        document.querySelector()
+        cardImgEl.src = recipeImg
+        cardTitleEl.textContent = recipeTitle
+
+        document.querySelector(".card").appendChild(cardImgEl);
+        document.querySelector(".card").appendChild(cardTitleEl);
+        // cardImg.classList.add("meal-img");
+        // cardImg.src = recipeImg;
         
 
         }    
