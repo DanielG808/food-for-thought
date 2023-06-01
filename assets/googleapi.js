@@ -25,9 +25,9 @@ function drawLocaationMarkers() {
   const request = {
     //finding stores in a 5kilometer radius
     location: userLocation,
-    radius: "5000",
-    type: ["store"],
-  };
+    radius: '5000',
+    type: ["supermarket"],
+  }
 
   service = new google.maps.places.PlacesService(map);
   console.log(service);
