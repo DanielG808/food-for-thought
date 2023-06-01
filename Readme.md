@@ -22,9 +22,9 @@ N/A
 
 ## App link
 
-https://tegaomare.github.io/weather-dashboard/
+https://danielg808.github.io/food-for-thought/
 
-## Usage
+## User Interaction
 
 1.On the homepage, users are greeted with a clean and welcoming interface. A prominently displayed search bar encourages them to enter their ingredient.
 
