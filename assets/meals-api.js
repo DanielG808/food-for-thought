@@ -34,9 +34,14 @@ function getMealCards() {
         document.querySelector(".card-container").appendChild(recipeCard);
 
         var recipeTitle = meals[i].strMeal;
-        console.log(recipeTitle);
         var recipeImg = meals[i].strMealThumb;
-        console.log(recipeImg);
+
+        var cardImg = document.createElement("img");
+        cardImg.classList.add("meal-img")
+        cardImg.src = recipeImg
+
+        document.querySelector()
+        
 
         }    
     })
