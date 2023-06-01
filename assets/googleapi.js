@@ -24,7 +24,7 @@ function drawLocaationMarkers(){
     //finding stores in a 5kilometer radius
     location: userLocation,
     radius: '5000',
-    type: ["store"],
+    type: ["Farmer market"],
   }
 
   service = new google.maps.places.PlacesService(map);
