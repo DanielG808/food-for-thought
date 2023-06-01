@@ -26,7 +26,17 @@ https://tegaomare.github.io/weather-dashboard/
 
 ## Usage
 
-Our user-friendly interface allows you to input the cities you're interested in and instantly retrieve the current weather conditions as well as the forecast for the upcoming days. Whether you're embarking on a weekend getaway or a long-term adventure, this tool provides you with valuable insights to help you make informed decisions about your travel plans.
+1.On the homepage, users are greeted with a clean and welcoming interface. A prominently displayed search bar encourages them to enter their ingredient.
+
+2.After entering the ingredient, users can click on the "Find Recipes" button to initiate the search.
+
+3.The webpage then displays a visually appealing list of recipe options, each presented in a card format. Users can scroll through the options and click on any recipe card to view more details.
+
+4.Within the recipe view, users can read the recipe description, view the required ingredients, and access the step-by-step instructions. They also have the option to share the recipe on social media or save it for future reference.
+
+5.To explore nearby grocery stores, users can click on the "Grocery Stores" tab or an integrated map icon. This opens a map view with pinned locations of grocery stores in their vicinity.
+
+6.Users can interact with the map to zoom in/out, click on pins for more information, or get directions to the desired grocery store.
 
 ## Credits
 
