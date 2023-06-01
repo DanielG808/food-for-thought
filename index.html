@@ -29,10 +29,14 @@
       <!-- Ingredient Search -->
       <aside class="ingredient-search">
         <h2 id="ing">Ingredients Search</h2>
-        <ul class="menu ing-search">
-          <li><input type="search" placeholder="Search"></li>
-          <li><button type="button" class="button">Search</button></li>
-        </ul>
+        <form action="https://www.google.com/search" class="search" id="search-bar">
+          <input type="search" placeholder="Type Ingredient..." name="q" class="search__input">
+
+          <div class="search__button" id="search-button">
+              <i class="ri-search-2-line search__icon"></i>
+              <i class="ri-close-line search__close"></i>
+          </div>
+      </form>
         <h2 id="maps">Map</h2>
         <div class="map-container">
           <div id="map"></div>
