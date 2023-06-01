@@ -3,37 +3,32 @@ let service;
 let infowindow;
 let lat;
 let long;
+let userLocation;
 
-navigator.geolocation.getCurrentPosition((position) => {
-  lat = position.coords.latitude;
-  long = position.coords.longitude;})
-
-function initMap() {
-  const sydney = new google.maps.LatLng(-33.867, 151.195);
-  myLocation = {
-    lat,
-    long
-  }
+function centerMapOnUserLocation(position) {
+  //getting user location
+  userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
   infowindow = new google.maps.InfoWindow();
   map = new google.maps.Map(document.getElementById("map"), {
-    center: sydney,
+    center: userLocation,
     zoom: 15,
   });
+  //putting the markers on the map
+  drawLocaationMarkers();
 
+}
+
+function drawLocaationMarkers(){
   const request = {
-    location: sydney,
+    //finding stores in a 5kilometer radius
+    location: userLocation,
     radius: '5000',
     type: ["store"],
   }
 
-  const trying = {
-    query: "store",
-    fields: ["name", "geometry"],
-  }
-
   service = new google.maps.places.PlacesService(map);
-  console.log(google.maps.places.PlacesService(map))
+  console.log(service)
   service.nearbySearch(request, (results, status) => {
       console.log(results)
       console.log(status)
@@ -46,6 +41,14 @@ function initMap() {
       map.setCenter(results[0].geometry.location);
     }
   });
+}
+
+function initMap() {
+  // get user location
+
+  navigator.geolocation.getCurrentPosition(centerMapOnUserLocation)
+
+
 }
 
 function createMarker(place) {
