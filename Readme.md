@@ -40,7 +40,11 @@ https://danielg808.github.io/food-for-thought/
 
 ## Credits
 
-columbia coding bootcamp
+Aurora Stone
+Daniel Gray
+Tega Omarejedje
+Christopher Lee
+Sameer Mirza
 
 ## License
 
