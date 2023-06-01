@@ -1,6 +1,7 @@
 // DEPENEDENCIES
 
 var recipeCardEl = document.getElementsByClassName("card-section")
+var searchButton = document.getElementsByClassName("search-button")
 
 // DATA
 
