@@ -2,7 +2,7 @@
 
 var recipeCardEl = document.getElementsByClassName("card-section");
 
-var searchInputEl = document.querySelector(".search-input");
+var searchInputEl = document.querySelector(".search__input");
 var searchButtonEl = document.querySelector("#search-button");
 
 
@@ -74,7 +74,7 @@ getMealRecipe();
 
 // USER INTERACTIONS
 
-searchButtonEl.addEventListener("click", function (event) {
+searchInputEl.addEventListener("keydown", function (e) {
   event.preventDefault();
   console.log("button clicked!");
   getMealCards();
