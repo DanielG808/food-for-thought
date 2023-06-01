@@ -82,7 +82,7 @@ footer {
 
 .meal-img {
   width: 100px;
-  height: auto;
+  height: 100px;
 }
 
 /* Search Style */
@@ -102,6 +102,22 @@ footer {
   display: flex;
   margin-left: 50px;
   width: 80%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+  max-height: 200px;
+  min-width: 200px; 
+}
+
+.card img {
+  display: flex;
+  justify-content: center;
 }
 
 /* New Search Bar */
