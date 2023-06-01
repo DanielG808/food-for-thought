@@ -1,9 +1,19 @@
 let map;
 let service;
 let infowindow;
+let lat;
+let long;
+
+navigator.geolocation.getCurrentPosition((position) => {
+  lat = position.coords.latitude;
+  long = position.coords.longitude;})
 
 function initMap() {
   const sydney = new google.maps.LatLng(-33.867, 151.195);
+  myLocation = {
+    lat,
+    long
+  }
 
   infowindow = new google.maps.InfoWindow();
   map = new google.maps.Map(document.getElementById("map"), {
@@ -12,18 +22,19 @@ function initMap() {
   });
 
   const request = {
-    query: "Walmart",
-    fields: ["name", "geometry"],
+    location: sydney,
+    radius: '5000',
+    type: ["store"],
   }
 
   const trying = {
-    query: "ingles",
+    query: "store",
     fields: ["name", "geometry"],
   }
 
   service = new google.maps.places.PlacesService(map);
   console.log(google.maps.places.PlacesService(map))
-  service.findPlaceFromQuery(trying, (results, status) => {
+  service.nearbySearch(request, (results, status) => {
       console.log(results)
       console.log(status)
       console.log(google.maps.places.PlacesServiceStatus)
