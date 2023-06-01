@@ -159,3 +159,30 @@ footer {
 }
 
 /* Search Bar Animations */
+
+.show-search {
+  width: 100%;
+}
+
+.show-search .search__input {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.show-search .search__button {
+  transform: rotate(90deg);
+}
+
+.show-search .search__icon {
+  opacity: 0;
+}
+
+.show-search .search__close {
+  opacity: 1;
+}
+
+@media screen and (min-width: 576px) {
+  .show-search {
+    width: 450px;
+  }
+}
