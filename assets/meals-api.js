@@ -3,7 +3,7 @@
 var recipeCardEl = document.getElementsByClassName("card-section");
 
 var searchInputEl = document.querySelector(".search-input");
-var searchButtonEl = document.querySelector(".search-button");
+var searchButtonEl = document.querySelector(".search__button");
 
 
 // DATA
