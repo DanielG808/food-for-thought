@@ -3,7 +3,8 @@
 var recipeCardEl = document.getElementsByClassName("card-section");
 
 var searchInputEl = document.querySelector(".search-input");
-var searchButtonEl = document.getElementsByClassName("search-button");
+var searchButtonEl = document.querySelector(".search-button");
+
 
 // DATA
 
@@ -56,8 +57,8 @@ getMealRecipe();
 
 searchButtonEl.addEventListener("click", function (event) {
   event.preventDefault();
-  console.log("button clicked!")
+  console.log("button clicked!");
   getMeal();
-}) 
+})
 
 // INITILIZATIONS
