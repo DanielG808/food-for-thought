@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Lilita+One&display=swap');
 
 :root {
-  --header_color: cornsilk;
-  --main_color: pink;
+  --main_color1: red;
+  --main_color2: white;
+  --main_color3: #831010;
+  --main_color4: #564d4d;
+  --font_color1: black;
+  --font_color2: white;
+  --
 }
 
 * {
