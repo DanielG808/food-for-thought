@@ -32,7 +32,7 @@ function createMarker(place) {
   if (!place.geometry || !place.geometry.location) return;
 
   const icon = {
-    url: "path/to/custom/icon.png", // Provide the path to your custom icon image
+    url: "./assets/images/grocery.png", // Provide the path to your custom icon image
     scaledSize: new google.maps.Size(50, 50), // Adjust the size of the icon as needed
   };
 
