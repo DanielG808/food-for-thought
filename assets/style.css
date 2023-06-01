@@ -104,7 +104,7 @@ footer {
   position: relative;
   width: 76px;
   height: 76px;
-  background-color: var(--white-color);
+  background-color: white;
   box-shadow: 0 4px 24px hsla(222, 68%, 12%, 0.1);
   border-radius: 4rem;
   padding: 10px;
@@ -119,8 +119,9 @@ footer {
   height: 100%;
   border-radius: 4rem;
   padding-left: 14px;
-  font-family: var(--body-font);
-  font-size: var(--small-font-size);
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Lilita One', cursive;
+  font-size: .875rem;
   font-weight: 500;
   opacity: 0;
   pointer-events: none;
@@ -128,13 +129,13 @@ footer {
 }
 
 .search__input:-webkit-autofill {
-  box-shadow: 0 0 0 100px var(--white-color) inset;
+  box-shadow: 0 0 0 100px white inset;
 }
 
 .search__button {
   width: 56px;
   height: 56px;
-  background-color: var(--dark-color);
+  background-color: black;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -148,7 +149,7 @@ footer {
 }
 
 .search__icon, .search__close {
-  color: var(--white-color);
+  color: white;
   font-size: 1.5rem;
   position: absolute;
   transition: opacity 0.5s cubic-bezier(0.9, 0, 0.3, 0.9);
