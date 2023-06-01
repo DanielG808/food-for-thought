@@ -12,14 +12,16 @@ function initMap() {
   });
 
   const request = {
-    query: "Museum of Contemporary Art Australia",
+    query: "Walmart",
     fields: ["name", "geometry"],
-  };
+  }
 
   service = new google.maps.places.PlacesService(map);
+  console.log(google.maps.places.PlacesService(map))
   service.findPlaceFromQuery(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-      for (let i = 0; i < results.length; i++) {
+      console.log(results)
+      for (let i = 0; i < results.length; i++) {+
         createMarker(results[i]);
       }
 
