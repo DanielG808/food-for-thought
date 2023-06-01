@@ -75,9 +75,11 @@ getMealRecipe();
 // USER INTERACTIONS
 
 searchInputEl.addEventListener("keydown", function (e) {
-  event.preventDefault();
-  console.log("button clicked!");
-  getMealCards();
+  if (e.code === 'Enter') {
+    e.preventDefault();
+    console.log("button clicked!");
+    getMealCards();
+  }
 })
 
 // INITILIZATIONS
