@@ -26,40 +26,32 @@ function getMealCards() {
         console.log(meals);
         var mealId = meals[i].idMeal;
 
+        
+        var recipeTitle = meals[i].strMeal;
+        var recipeImg = meals[i].strMealThumb;
         // generates a card for the recipe info to live
         var recipeCard = document.createElement("div");
-        // adds the class card for styling
-        recipeCard.classList.add("card");
-        // recipeCard.textContent = "card"
-        document.querySelector(".card-container").appendChild(recipeCard);
+        var imgDiv = document.createElement("div");
+        var titleDiv = document.createElement("div");
+        var cardImgEl = document.createElement("img");
+        var cardTitleEl = document.createElement("p");
         
-        for (i = 0; i < meals.length; i++) {
-          var recipeTitle = meals[i].strMeal;
-          var recipeImg = meals[i].strMealThumb;
+        imgDiv.classList.add("card-section");
+        titleDiv.classList.add("card-section");
+        recipeCard.classList.add("card");
+        cardImgEl.classList.add("meal-img");
+        cardImgEl.src = recipeImg
+        cardTitleEl.textContent = recipeTitle
 
-          var imgDiv = document.createElement("div");
-          var titleDiv = document.createElement("div");
+        document.querySelector(".card-container").appendChild(recipeCard);
+        recipeCard.appendChild(imgDiv);
+        recipeCard.appendChild(titleDiv);
+        imgDiv.appendChild(cardImgEl);
+        titleDiv.appendChild(cardTitleEl);
 
-          imgDiv.classList.add("card-section");
-          titleDiv.classList.add("card-section");
-
-          document.querySelector(".card").appendChild(imgDiv);
-          document.querySelector(".card").appendChild(titleDiv);
-
-          var cardImgEl = document.createElement("img");
-          var cardTitleEl = document.createElement("p");
           // var cardLinkEl = document.createElement("");
 
-          cardImgEl.classList.add("meal-img");
-          cardImgEl.src = recipeImg
-          cardTitleEl.textContent = recipeTitle
 
-          document.querySelector(".card-section").appendChild(cardImgEl);
-          document.querySelector(".card-section").appendChild(cardTitleEl);
-        }
-
-        
-        
 
         }    
     })
