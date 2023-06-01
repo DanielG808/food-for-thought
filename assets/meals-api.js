@@ -26,7 +26,7 @@ function getMealId() {
         var recipeTitle = meals[i].strMeal;
         // console.log("This is the recipe title: " + recipeTitle);
 
-        recipeCard.classList.add("card", "card-override");
+        recipeCard.classList.add("card");
         recipeCard.textContent = "card"
 
         document.querySelector(".card-container").appendChild(recipeCard);

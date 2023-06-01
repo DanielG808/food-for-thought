@@ -18,12 +18,17 @@
 body {
   width: 100%;
   min-height: 99.8vh;
-  overflow: hidden;
+ 
 }
 
 header {
   background-color: var(--header_color);
   display: flex;
+}
+
+main {
+  display: flex;
+  margin-top: 95px;
 }
 
 footer {
@@ -55,7 +60,7 @@ footer {
   flex-direction: column;
   width: 20%;
   position: relative;
-  bottom: -95px;
+  
   align-items: center;
 }
 
@@ -72,8 +77,19 @@ footer {
 
 /* Search Style */
 
-#map {
-  height: 820px;
+.map-container {
+  display: flex;
+  height: 60vh;
   width: 100%;
 }
 
+#map {
+  height:500px;
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  margin-left: 50px;
+  width: 80%;
+}
