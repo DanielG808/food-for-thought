@@ -3,15 +3,14 @@
 var recipeCardEl = document.getElementsByClassName("card-section");
 
 var searchInputEl = document.querySelector(".search-input");
-var searchButtonEl = document.querySelector(".search__button");
+var searchButtonEl = document.querySelector("#search-button");
 
 
 // DATA
 
 //FUNCTIONS
 
-function getMeal() {
-    console.log("got dat API");
+function getMealCards() {
 
     var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast`
 
@@ -24,16 +23,36 @@ function getMeal() {
       console.log(data);
       var meals = data.meals;
       for (i = 0; i < meals.length; i++) {
-        var recipeCard = document.createElement("div");
+        console.log(meals);
         var mealId = meals[i].idMeal;
-        // console.log("This is a meal ID => " + mealId);
-        var recipeTitle = meals[i].strMeal;
-        // console.log("This is the recipe title: " + recipeTitle);
 
+        
+        var recipeTitle = meals[i].strMeal;
+        var recipeImg = meals[i].strMealThumb;
+        // generates a card for the recipe info to live
+        var recipeCard = document.createElement("div");
+        var imgDiv = document.createElement("div");
+        var titleDiv = document.createElement("div");
+        var cardImgEl = document.createElement("img");
+        var cardTitleEl = document.createElement("p");
+        
+        imgDiv.classList.add("card-section");
+        titleDiv.classList.add("card-section");
         recipeCard.classList.add("card");
-        recipeCard.textContent = "card"
+        cardImgEl.classList.add("meal-img");
+        cardImgEl.src = recipeImg
+        cardTitleEl.textContent = recipeTitle
 
         document.querySelector(".card-container").appendChild(recipeCard);
+        recipeCard.appendChild(imgDiv);
+        recipeCard.appendChild(titleDiv);
+        imgDiv.appendChild(cardImgEl);
+        titleDiv.appendChild(cardTitleEl);
+
+          // var cardLinkEl = document.createElement("");
+
+
+
         }    
     })
 }
@@ -58,7 +77,7 @@ getMealRecipe();
 searchButtonEl.addEventListener("click", function (event) {
   event.preventDefault();
   console.log("button clicked!");
-  getMeal();
+  getMealCards();
 })
 
 // INITILIZATIONS
