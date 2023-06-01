@@ -50,15 +50,15 @@ function getMealCards() {
         titleDiv.appendChild(cardTitleEl);
 
         recipeCard.addEventListener("click" , function(event) {
-          console.log("ya clicked a recipe...CONGRATS!")
+          console.log("ya clicked a recipe...CONGRATS!");
+          getMealRecipe(mealId);
         })
-
         }    
     })
 }
 
-function getMealRecipe() {
-  var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=53016`
+function getMealRecipe(id) {
+  var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
         
         fetch(requestUrl)
         .then(function (response) {
