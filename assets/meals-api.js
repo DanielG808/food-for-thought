@@ -20,10 +20,16 @@ function getMealId() {
       console.log(data);
       var meals = data.meals;
       for (i = 0; i < meals.length; i++) {
+        var recipeCard = document.createElement("div");
         var mealId = meals[i].idMeal;
-        console.log("This is a meal ID => " + mealId);
+        // console.log("This is a meal ID => " + mealId);
         var recipeTitle = meals[i].strMeal;
-        console.log("This is the recipe title: " + recipeTitle);
+        // console.log("This is the recipe title: " + recipeTitle);
+
+        recipeCard.classList.add("card");
+        recipeCard.textContent = "card"
+
+        document.querySelector(".card-container").appendChild(recipeCard);
         }    
     })
 }
