@@ -42,7 +42,17 @@
         <div class="map-container">
           <div id="map"></div>
         </div>
-        
+        <!-- weather widget -->
+        <div id = "weather_widget">
+          <input id = "weather_city" placeholder="Your Location" >
+          <button id = "weather_search" class = "button">Search</button>
+          <div>
+            <p id = "current_city" class ="text-center"></p>
+            <p id = "current_date" class ="text-center"></p>
+            <p id = "current_temp" class ="text-center"></p>
+            <img id = "current_icon">
+          </div>
+        </div>
       </aside>
       <!-- recipe list -->
       <section class="card-container">
@@ -57,6 +67,12 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
       defer
     ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"
+  ></script>
+    <script src="./assets/weather.js"></script>
     <script src="assets/meals-api.js"></script>
     <script src="assets/googleapi.js"></script>
     <script src="./assets/main.js"></script>

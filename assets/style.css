@@ -10,7 +10,7 @@
 }
 
 * {
-  border: solid red 1px;
+  /* border: solid red 1px; */
   margin: 0;
   padding: 0;
   font-family: 'Kanit', sans-serif;
@@ -49,6 +49,29 @@ footer {
   text-align: center;
 }
 
+/* weather widget */
+#weather_widget {
+  border: 1px solid var(--main_color4);
+  padding: 15px
+}
+
+#weather_search {
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+}
+
+#current_temp {
+font-size: 30px;
+}
+
+#current_icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* top bar style */
 
 .topbar-override {
