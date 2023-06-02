@@ -222,3 +222,11 @@ footer {
     width: 250px;
   }
 }
+
+@media  screen and (max-width: 576px) {
+  .card{
+    display:grid;
+    
+  }
+  
+}

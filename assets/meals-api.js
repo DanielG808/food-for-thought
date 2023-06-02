@@ -58,7 +58,7 @@ function getMealCards() {
 }
 
 function getMealRecipe(id) {
-  var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+  var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}&per_page=5`
         
         fetch(requestUrl)
         .then(function (response) {
