@@ -82,6 +82,7 @@ function getMealCards() {
           .then(function (data) {
               console.log(data);
               var popUp = document.getElementById("popup").children[1];
+              popUp.textContent = ""
               var title = document.createElement("h2");
               
               title.textContent = data.meals[0].strMeal;
