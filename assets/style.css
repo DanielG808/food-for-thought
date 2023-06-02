@@ -408,14 +408,14 @@ font-size: 30px;
   }
 }
 
-@media  screen and (max-width: 576px) {
+@media  screen and (max-width: 608px) {
   .card-container{
     display:grid;
     grid-template-columns: repeat(1, 290px);
   }
   .ingredient-search{
     display: flex;
-
+    justify-content: center;
   }
   main{
     display:flex;
