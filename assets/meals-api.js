@@ -84,10 +84,28 @@ function getMealCards() {
               var popUp = document.getElementById("popup").children[1];
               popUp.textContent = ""
               var title = document.createElement("h2");
-              
+              var recipeItems = document.createElement("ul");
+
               title.textContent = data.meals[0].strMeal;
 
               popUp.appendChild(title);
+              popUp.appendChild(recipeItems);
+              
+              for (var i = 1; i <= 20; i++) {
+                var ingredient = data.meals[0]["strIngredient" + i];
+                console.log(ingredient);
+                if (ingredient) {
+                  var ingLi = document.createElement("li");
+
+                  ingLi.textContent = ingredient
+
+                  recipeItems.appendChild(ingLi);
+                }
+              }
+              
+              
+              
+              
           })
   }
   
