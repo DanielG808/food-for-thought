@@ -96,6 +96,8 @@ function getMealCards() {
               img.src = data.meals[0].strMealThumb;
               recipeInstructions.textContent = data.meals[0].strInstructions;
 
+              titleDiv.setAttribute('id', 'modal-header');
+              infoDiv.setAttribute('id', 'modal-info');
               title.setAttribute("id", "modal-title");
               img.setAttribute("id", "modal-img");
               recipeItems.setAttribute("id", "modal-items");
