@@ -85,6 +85,8 @@ function getMealCards() {
               popUp.textContent = ""
 
               var titleDiv = document.createElement("div");
+              var infoDiv = document.createElement("div");
+
               var title = document.createElement("h2");
               var img = document.createElement("img");
               var recipeItems = document.createElement("ul");
@@ -100,10 +102,12 @@ function getMealCards() {
               recipeInstructions.setAttribute("id", "modal-instructions");
               
               popUp.appendChild(titleDiv);
+              popUp.appendChild(infoDiv);
+
               titleDiv.appendChild(title);
-              popUp.appendChild(img);
-              popUp.appendChild(recipeItems);
-              popUp.appendChild(recipeInstructions);
+              infoDiv.appendChild(img);
+              infoDiv.appendChild(recipeItems);
+              infoDiv.appendChild(recipeInstructions);
               
               for (var i = 1; i <= 20; i++) {
                 var ingredient = data.meals[0]["strIngredient" + i];
