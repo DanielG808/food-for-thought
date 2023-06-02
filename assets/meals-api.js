@@ -22,7 +22,7 @@ function getMealCards() {
     .then(function (data) {
       console.log(data);
       var meals = data.meals;
-      for (i = 0; i < meals.length; i++) {
+      for (i = 0; i < 16; i++) {
         console.log(meals);
         var mealId = meals[i].idMeal;
 
@@ -60,7 +60,7 @@ function getMealCards() {
 }
 
 function getMealRecipe(id) {
-  var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}&per_page=5`
+  var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
         
         fetch(requestUrl)
         .then(function (response) {
