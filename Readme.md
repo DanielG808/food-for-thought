@@ -1,3 +1,5 @@
+<img src="./assets/images/webpage.png" alt="webpage picture" >
+
 ## Description
 
 Welcome to Food For Thought, a user-friendly webpage designed to help you find the perfect recipe based on your available ingredient. Whether you are a college student, a single parent, a yuppie, a food enthusiast, or anyone else in need of culinary inspiration, this is the place for you!
