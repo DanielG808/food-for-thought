@@ -11,7 +11,6 @@ var searchButtonEl = document.querySelector("#search-button");
 //FUNCTIONS
 
 function getMealCards() {
-
     var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputEl.value}`
 
     fetch(requestUrl)
@@ -43,16 +42,13 @@ function getMealCards() {
         cardImgEl.src = recipeImg
         cardTitleEl.textContent = recipeTitle
 
+        // document.getElementById("card-container").removeChild(document.getElementById("card"))
+
         document.querySelector(".card-container").appendChild(recipeCard);
         recipeCard.appendChild(imgDiv);
         recipeCard.appendChild(titleDiv);
         imgDiv.appendChild(cardImgEl);
         titleDiv.appendChild(cardTitleEl);
-
-          // var cardLinkEl = document.createElement("");
-
-
-
         }    
     })
 }
