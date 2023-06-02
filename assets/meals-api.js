@@ -37,7 +37,9 @@ function getMealCards() {
         var cardTitleEl = document.createElement("p");
         
         imgDiv.classList.add("card-section");
+        imgDiv.classList.add("card-section-img");
         titleDiv.classList.add("card-section");
+        titleDiv.classList.add("card-section-title");
         recipeCard.classList.add("card");
         cardImgEl.classList.add("meal-img");
         cardImgEl.src = recipeImg
