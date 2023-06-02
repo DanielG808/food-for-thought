@@ -113,13 +113,14 @@ footer {
   min-width: 200px;
   border-radius: 35px !important;
   opacity: 1;
+  transition: transform ease-out 250ms;
 }
 
 .card:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0 rgba(0, 0, 0, 0.6);
-  transition: transform 150ms;
+  transition: transform ease-in 250ms;
   transform: scale(1.03);
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(0, 0, 0, 0.6);
 }
 
 .card-section{
