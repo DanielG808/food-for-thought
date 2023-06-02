@@ -19,12 +19,23 @@ const toggleSearch = (search, button) =>{
 
 // Popup
 
-document.getElementById('open-pop-btn').addEventListener('click', function () {
-    document.getElementsByClassName('popup')[0].classList.add('active');
-});
+function createPopup(id){
+    let popupNode = document.querySelector(id);
+    let overlay = popupNode.querySelector('.overlay');
+    let closeBtn = popupNode.querySelector('.close-btn');
+    function openPopup(){
+        popupNode.classList.add('active');
+    }
+    function closePopup(){
+        popupNode.classList.remove('active');
+    }
 
-document.getElementById('return-pop-btn').addEventListener('click', function () {
-    document.getElementsByClassName('popup')[0].classList.remove('active');
-});
+    overlay.addEventListener('click', closePopup);
+    closeBtn.addEventListener('click', closePopup);
+    return openPopup;
+}
+
+let popup = createPopup('#popup');
+document.querySelector('#open-popup').addEventListener('click', popup);
 
 // End Popup
