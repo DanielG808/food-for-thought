@@ -382,6 +382,7 @@ font-size: 30px;
 #modal-info {
   display: flex;
   flex-wrap: wrap;
+  margin: 4px;
 }
 
 /* Media Queries */
