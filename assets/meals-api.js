@@ -6,6 +6,7 @@ var searchInputEl = document.querySelector(".search__input");
 var searchButtonEl = document.querySelector("#search-button");
 
 
+
 // DATA
 w = document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
 var targetWidth = 576;
@@ -23,10 +24,12 @@ function getMealCards() {
     .then(function (data) {
       console.log(data);
       var meals = data.meals;
+      
+      document.getElementsByClassName("card-container")[0].innerHTML = ""
+
       for (i = 0; i < 16; i++) {
         console.log(meals);
         var mealId = meals[i].idMeal;
-
         
         var recipeTitle = meals[i].strMeal;
         var recipeImg = meals[i].strMealThumb;
@@ -42,10 +45,11 @@ function getMealCards() {
         titleDiv.classList.add("card-section");
         titleDiv.classList.add("card-section-title");
         recipeCard.classList.add("card");
-        recipeCard.setAttribute('onclick', 'popup()')
+        recipeCard.setAttribute('onclick', 'popup()');
+        recipeCard.setAttribute('data-mealid', mealId);
         cardImgEl.classList.add("meal-img");
-        cardImgEl.src = recipeImg
-        cardTitleEl.textContent = recipeTitle
+        cardImgEl.src = recipeImg;
+        cardTitleEl.textContent = recipeTitle;
 
         document.querySelector(".card-container").appendChild(recipeCard);
         recipeCard.appendChild(imgDiv);
@@ -55,38 +59,52 @@ function getMealCards() {
 
         recipeCard.addEventListener("click" , function(event) {
           console.log("ya clicked a recipe...CONGRATS!");
-          getMealRecipe(mealId);
-        })
-        }    
+          var target = event.target;
+          while (!target.classList.contains('card')) {
+            target = target.parentElement;
+          }
+            console.log(target);
+            var mealId =target.getAttribute('data-mealid');
+            getMealRecipe(mealId);
+        }, true)
+      }    
     })
-}
+  }
+  
+  function getMealRecipe(id) {
+    var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+    
+          fetch(requestUrl)
+          .then(function (response) {
+              console.log(response);
+               return response.json();
+          })
+          .then(function (data) {
+              console.log(data);
+              var popUp = document.getElementById("popup").children[1];
+              popUp.textContent = ""
+              var title = document.createElement("h2");
+              
+              title.textContent = data.meals[0].strMeal;
 
-function getMealRecipe(id) {
-  var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
-        
-        fetch(requestUrl)
-        .then(function (response) {
-            console.log(response);
-             return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-        })
-}        
-
-getMealRecipe();
-
-// USER INTERACTIONS
-
+              popUp.appendChild(title);
+          })
+  }
+  
+  // getMealRecipe();
+  
+  // USER INTERACTIONS
+  
 searchInputEl.addEventListener("keydown", function (e) {
   if (e.code === 'Enter') {
     e.preventDefault();
     console.log("button clicked!");
+    // document.getElementsByClassName("card-container").removeChild(document.getElementsByClassName("card"));
     getMealCards();
     searchInputEl.value = ""
   }
 })
 
-appendRecipes
+// appendRecipes
 
 // INITILIZATIONS
