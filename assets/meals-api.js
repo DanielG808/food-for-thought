@@ -84,11 +84,14 @@ function getMealCards() {
               var popUp = document.getElementById("popup").children[1];
               popUp.textContent = ""
               var title = document.createElement("h2");
+              var img = document.createElement("img");
               var recipeItems = document.createElement("ul");
 
               title.textContent = data.meals[0].strMeal;
+              img.src = data.meals[0].strMealThumb;
 
               popUp.appendChild(title);
+              popUp.appendChild(img);
               popUp.appendChild(recipeItems);
               
               for (var i = 1; i <= 20; i++) {
