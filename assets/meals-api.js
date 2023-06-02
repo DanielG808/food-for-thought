@@ -93,11 +93,19 @@ function getMealCards() {
               
               for (var i = 1; i <= 20; i++) {
                 var ingredient = data.meals[0]["strIngredient" + i];
+                var measure = data.meals[0]["strMeasure1" + i];
                 console.log(ingredient);
-                if (ingredient) {
+                if (ingredient && measure) {
                   var ingLi = document.createElement("li");
 
-                  ingLi.textContent = ingredient
+                  ingLi.textContent = measure + " " + ingredient;
+
+                  recipeItems.appendChild(ingLi);
+                }
+                else if (ingredient) {
+                  var ingLi = document.createElement("li");
+
+                  ingLi.textContent = ingredient;
 
                   recipeItems.appendChild(ingLi);
                 }
