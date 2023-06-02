@@ -43,6 +43,44 @@ footer {
   margin: 20px;
 }
 
+/* weather widget */
+#space_maker{
+  padding: 8%;
+}
+
+#weather_widget {
+  border: 1px solid var(--main_color4);
+  box-shadow: 0 0 5px black;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #831010;
+  color: white;
+  background-image: linear-gradient(to bottom right, var(--main_color1), var(--main_color3));
+}
+
+#weather_question {
+  
+}
+
+#weather_search {
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  border-radius: 15px;
+}
+
+#current_temp {
+font-size: 30px;
+}
+
+#current_icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
 /* top bar style */
 
 .topbar-override {
