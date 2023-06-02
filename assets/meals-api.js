@@ -11,6 +11,7 @@ var searchButtonEl = document.querySelector("#search-button");
 //FUNCTIONS
 
 function getMealCards() {
+
     var requestUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputEl.value}`
 
     fetch(requestUrl)
@@ -21,7 +22,7 @@ function getMealCards() {
     .then(function (data) {
       console.log(data);
       var meals = data.meals;
-      for (i = 0; i < meals.length; i++) {
+      for (i = 0; i < 16; i++) {
         console.log(meals);
         var mealId = meals[i].idMeal;
 
@@ -36,25 +37,30 @@ function getMealCards() {
         var cardTitleEl = document.createElement("p");
         
         imgDiv.classList.add("card-section");
+        imgDiv.classList.add("card-section-img");
         titleDiv.classList.add("card-section");
+        titleDiv.classList.add("card-section-title");
         recipeCard.classList.add("card");
         cardImgEl.classList.add("meal-img");
         cardImgEl.src = recipeImg
         cardTitleEl.textContent = recipeTitle
-
-        // document.getElementById("card-container").removeChild(document.getElementById("card"))
 
         document.querySelector(".card-container").appendChild(recipeCard);
         recipeCard.appendChild(imgDiv);
         recipeCard.appendChild(titleDiv);
         imgDiv.appendChild(cardImgEl);
         titleDiv.appendChild(cardTitleEl);
+
+        recipeCard.addEventListener("click" , function(event) {
+          console.log("ya clicked a recipe...CONGRATS!");
+          getMealRecipe(mealId);
+        })
         }    
     })
 }
 
-function getMealRecipe() {
-  var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=53016`
+function getMealRecipe(id) {
+  var requestUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
         
         fetch(requestUrl)
         .then(function (response) {
@@ -75,6 +81,7 @@ searchInputEl.addEventListener("keydown", function (e) {
     e.preventDefault();
     console.log("button clicked!");
     getMealCards();
+    searchInputEl.value = ""
   }
 })
 
