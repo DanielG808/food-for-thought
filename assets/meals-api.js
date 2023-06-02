@@ -83,6 +83,10 @@ function getMealCards() {
               console.log(data);
               var popUp = document.getElementById("popup").children[1];
               popUp.textContent = ""
+
+              var titleDiv = document.createElement("div");
+              var infoDiv = document.createElement("div");
+
               var title = document.createElement("h2");
               var img = document.createElement("img");
               var recipeItems = document.createElement("ul");
@@ -92,19 +96,24 @@ function getMealCards() {
               img.src = data.meals[0].strMealThumb;
               recipeInstructions.textContent = data.meals[0].strInstructions;
 
+              titleDiv.setAttribute('id', 'modal-header');
+              infoDiv.setAttribute('id', 'modal-info');
               title.setAttribute("id", "modal-title");
               img.setAttribute("id", "modal-img");
               recipeItems.setAttribute("id", "modal-items");
               recipeInstructions.setAttribute("id", "modal-instructions");
+              
+              popUp.appendChild(titleDiv);
+              popUp.appendChild(infoDiv);
 
-              popUp.appendChild(title);
-              popUp.appendChild(img);
-              popUp.appendChild(recipeItems);
-              popUp.appendChild(recipeInstructions);
+              titleDiv.appendChild(title);
+              infoDiv.appendChild(img);
+              infoDiv.appendChild(recipeItems);
+              infoDiv.appendChild(recipeInstructions);
               
               for (var i = 1; i <= 20; i++) {
                 var ingredient = data.meals[0]["strIngredient" + i];
-                var measure = data.meals[0]["strMeasure1" + i];
+                var measure = data.meals[0]["strMeasure" + i];
                 console.log(ingredient);
                 if (ingredient && measure) {
                   var ingLi = document.createElement("li");
