@@ -10,7 +10,7 @@
 }
 
 * {
-  border: solid red 1px;
+  /* border: solid red 1px; */
   margin: 0;
   padding: 0;
   font-family: 'Kanit', sans-serif !important; 
@@ -307,7 +307,7 @@ font-size: 30px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.15);
-  width: 95%;
+  width: 60%;
   max-width: 1500px;
   background: #fff;
   padding: 25px;
@@ -382,7 +382,6 @@ font-size: 30px;
 #modal-info {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 /* Media Queries */
