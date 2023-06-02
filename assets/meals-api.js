@@ -7,7 +7,8 @@ var searchButtonEl = document.querySelector("#search-button");
 
 
 // DATA
-
+w = document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
+var targetWidth = 576;
 //FUNCTIONS
 
 function getMealCards() {
@@ -85,5 +86,7 @@ searchInputEl.addEventListener("keydown", function (e) {
     searchInputEl.value = ""
   }
 })
+
+appendRecipes
 
 // INITILIZATIONS
