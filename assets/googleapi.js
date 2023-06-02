@@ -25,7 +25,7 @@ function drawLocaationMarkers() {
   const request = {
     //finding stores in a 5kilometer radius
     location: userLocation,
-    radius: '5000',
+    radius: '10000',
     type: ["supermarket"],
   }
 
