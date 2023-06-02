@@ -370,8 +370,21 @@ font-size: 30px;
 }
 
 /* Media Queries */
+@media screen and (max-width: 1450px) {
+  .show-search {
+    width: 250px;
+  }
+  .card-container{
+    grid-template-columns: repeat(3, 290px);
+  }
+  .ingredient-search{
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 1180px) {
   .show-search {
     width: 250px;
   }
@@ -380,18 +393,29 @@ font-size: 30px;
   }
   .ingredient-search{
     display: flex;
-    justify-content: space-evenly;
   }
 }
 
-@media  screen and (max-width: 576px) {
+@media screen and (max-width: 890px) {
+  .show-search {
+    width: 250px;
+  }
+  .card-container{
+    grid-template-columns: repeat(1, 290px);
+  }
+  .ingredient-search{
+    display: flex;
+  }
+}
+
+@media  screen and (max-width: 608px) {
   .card-container{
     display:grid;
     grid-template-columns: repeat(1, 290px);
   }
   .ingredient-search{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   main{
     display:flex;
