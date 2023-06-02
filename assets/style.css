@@ -249,6 +249,10 @@ footer {
     display: flex;
     justify-content: space-between;
   }
+  main{
+    display:flex;
+    flex-direction: column;
+  }
 
   
 }

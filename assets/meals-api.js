@@ -45,9 +45,7 @@ function getMealCards() {
         cardImgEl.classList.add("meal-img");
         cardImgEl.src = recipeImg
         cardTitleEl.textContent = recipeTitle
-        if((w &gt)= targetWidth){
-          
-        }
+
         document.querySelector(".card-container").appendChild(recipeCard);
         recipeCard.appendChild(imgDiv);
         recipeCard.appendChild(titleDiv);
