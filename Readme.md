@@ -1,6 +1,6 @@
 ## Description
 
-Welcome to Recipe Finder, a user-friendly webpage designed to help you find the perfect recipe based on your available ingredient. Whether you are a college student, a single parent, a yuppie, a food enthusiast, or anyone else in need of culinary inspiration, this is the place for you!
+Welcome to Food For Thought, a user-friendly webpage designed to help you find the perfect recipe based on your available ingredient. Whether you are a college student, a single parent, a yuppie, a food enthusiast, or anyone else in need of culinary inspiration, this is the place for you!
 
 ## Problem/Motivation
 
@@ -41,9 +41,13 @@ https://danielg808.github.io/food-for-thought/
 ## Credits
 
 Aurora Stone
+
 Daniel Gray
+
 Tega Omarejedje
+
 Christopher Lee
+
 Sameer Mirza
 
 ## License
