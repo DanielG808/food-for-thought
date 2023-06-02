@@ -7,7 +7,8 @@ var searchButtonEl = document.querySelector("#search-button");
 
 
 // DATA
-
+w = document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
+var targetWidth = 576;
 //FUNCTIONS
 
 function getMealCards() {
@@ -44,7 +45,9 @@ function getMealCards() {
         cardImgEl.classList.add("meal-img");
         cardImgEl.src = recipeImg
         cardTitleEl.textContent = recipeTitle
-
+        if((w &gt)= targetWidth){
+          
+        }
         document.querySelector(".card-container").appendChild(recipeCard);
         recipeCard.appendChild(imgDiv);
         recipeCard.appendChild(titleDiv);
@@ -84,5 +87,7 @@ searchInputEl.addEventListener("keydown", function (e) {
     searchInputEl.value = ""
   }
 })
+
+appendRecipes
 
 // INITILIZATIONS
