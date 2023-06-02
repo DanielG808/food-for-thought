@@ -371,7 +371,7 @@ font-size: 30px;
 
 /* Media Queries */
 
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 1000px) {
   .show-search {
     width: 250px;
   }
