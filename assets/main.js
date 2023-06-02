@@ -36,6 +36,6 @@ function createPopup(id){
 }
 
 let popup = createPopup('#popup');
-document.querySelector('#open-popup').addEventListener('click', popup);
+document.querySelector('.card').addEventListener('click', popup);
 
 // End Popup
