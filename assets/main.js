@@ -14,3 +14,17 @@ const toggleSearch = (search, button) =>{
  toggleSearch('search-bar', 'search-button');
 
 //  End Search Bar
+
+// =================================================================== //
+
+// Popup
+
+document.getElementById('open-pop-btn').addEventListener('click', function () {
+    document.getElementsByClassName('popup')[0].classList.add('active');
+});
+
+document.getElementById('return-pop-btn').addEventListener('click', function () {
+    document.getElementsByClassName('popup')[0].classList.remove('active');
+});
+
+// End Popup
