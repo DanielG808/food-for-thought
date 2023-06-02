@@ -371,7 +371,7 @@ font-size: 30px;
 
 /* Media Queries */
 
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 1000px) {
   .show-search {
     width: 250px;
   }
@@ -392,6 +392,10 @@ font-size: 30px;
   .ingredient-search{
     display: flex;
     justify-content: space-between;
+  }
+  main{
+    display:flex;
+    flex-direction: column;
   }
 
   
