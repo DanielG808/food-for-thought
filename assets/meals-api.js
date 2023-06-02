@@ -22,7 +22,7 @@ function getMealCards() {
     .then(function (data) {
       console.log(data);
       var meals = data.meals;
-      for (i = 0; i < meals.length; i++) {
+      for (i = 0; i < 16; i++) {
         console.log(meals);
         var mealId = meals[i].idMeal;
 

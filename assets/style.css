@@ -82,6 +82,7 @@ footer {
 .map-container {
   display: flex;
   width: 20rem;
+  flex-direction: column;
 }
 
 #maps {
@@ -336,4 +337,24 @@ footer {
   .show-search {
     width: 250px;
   }
+  .card-container{
+    grid-template-columns: repeat(2, 290px);
+  }
+  .ingredient-search{
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+@media  screen and (max-width: 576px) {
+  .card-container{
+    display:grid;
+    grid-template-columns: repeat(1, 290px);
+  }
+  .ingredient-search{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  
 }
