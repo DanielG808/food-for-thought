@@ -41,6 +41,7 @@ function getMealCards() {
         titleDiv.classList.add("card-section");
         titleDiv.classList.add("card-section-title");
         recipeCard.classList.add("card");
+        recipeCard.setAttribute('onclick', 'popup()')
         cardImgEl.classList.add("meal-img");
         cardImgEl.src = recipeImg
         cardTitleEl.textContent = recipeTitle
