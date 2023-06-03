@@ -8,7 +8,7 @@ Welcome to Food For Thought, a user-friendly webpage designed to help you find t
 
 We understand the frustration of having a single ingredient and not knowing what to make with it. That's why Food for thought is here to save the day! Our platform aims to address the common problem of incomplete recipes by providing a list of delectable options that you can whip up using the ingredient you have on hand. Additionally, we make it convenient for you by showing nearby grocery stores where you can purchase any additional items you might need.
 
-## How Recipe Finder Addresses the Problem
+## How Food For Thought Addresses the Problem
 
 Food For Thought offers a simple and intuitive interface to streamline your recipe search process. Here's how it works:
 
