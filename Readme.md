@@ -8,7 +8,7 @@ Welcome to Food For Thought, a user-friendly webpage designed to help you find t
 
 We understand the frustration of having a single ingredient and not knowing what to make with it. That's why Food for thought is here to save the day! Our platform aims to address the common problem of incomplete recipes by providing a list of delectable options that you can whip up using the ingredient you have on hand. Additionally, we make it convenient for you by showing nearby grocery stores where you can purchase any additional items you might need.
 
-## How Recipe Finder Addresses the Problem
+## How Food For Thought Addresses the Problem
 
 Food For Thought offers a simple and intuitive interface to streamline your recipe search process. Here's how it works:
 
@@ -39,6 +39,8 @@ https://danielg808.github.io/food-for-thought/
 5.To explore nearby grocery stores, users can enable Google map to automatically look up nearest grocery stores. Also an integrated map icon. This opens a map view with pinned locations of grocery stores in their vicinity.
 
 6.Users can interact with the map to zoom in/out, click on pins for more information, or get directions to the desired grocery store.
+
+7.users are also given the option to check for current location weather, before going out for grocery shopping.
 
 ## Credits
 
