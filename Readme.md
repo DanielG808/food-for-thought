@@ -40,6 +40,8 @@ https://danielg808.github.io/food-for-thought/
 
 6.Users can interact with the map to zoom in/out, click on pins for more information, or get directions to the desired grocery store.
 
+7.users are also given the option to check for current location weather, before going out for grocery shopping.
+
 ## Credits
 
 Aurora Stone
