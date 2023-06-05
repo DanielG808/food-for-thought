@@ -8,10 +8,10 @@
   --font-dark: black;
   --font-white: white;
   /* palette colors */
-  --palette1main: #222831;
-  --palette2secondary: #393E46;
-  --palette3tertiary: #32E0C4;
-  --palette4quaternary: #EEEEEE;
+  --palette1main: #DC0000;
+  --palette2secondary: #850000;
+  --palette3tertiary: #ee6240;
+  --palette4quaternary: #FFF6C3;
   /* other colors */
   --pop-red: #db3a3a;
   --main_color1: red;
@@ -36,7 +36,7 @@ body {
   background-image: url(./images/bg-img/design1.jpg);
   background-size: cover;
   background-size: 50%;
-  background-color: var(--palette2secondary);
+  background-color: #85000067;
   background-blend-mode: overlay;
 }
 
@@ -70,7 +70,16 @@ footer {
   position: relative;
   width: 100%;
   background: var(--palette1main);
-  color: var(--font-white);
+  color: var(--font-dark);
+}
+
+.cHeader {
+  color: var(--font-dark) !important;
+  background: var(--palette1main);
+}
+
+.topBack ul{
+  background: var(--palette1main) !important;
 }
 
 /* aside styling */
