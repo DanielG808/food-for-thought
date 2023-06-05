@@ -1,4 +1,4 @@
-<img src="./assets/images/webpage.png" alt="webpage picture" >
+<img src="./assets/images/danielg808.github.io_food-for-thought_.png" alt="webpage picture" >
 
 ## Description
 
